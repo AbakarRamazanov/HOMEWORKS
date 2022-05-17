@@ -3,6 +3,7 @@ package hw02unpackstring
 import (
 	"errors"
 	"testing"
+	"unicode/utf8"
 
 	"github.com/stretchr/testify/require"
 )
@@ -41,5 +42,13 @@ func TestUnpackInvalidString(t *testing.T) {
 			_, err := Unpack(tc)
 			require.Truef(t, errors.Is(err, ErrInvalidString), "actual error %q", err)
 		})
+	}
+}
+
+func TestUnpack2(t *testing.T) {
+	const textTest, lengthTest = "3a4b6c", 6
+	result := utf8.RuneCountInString(textTest)
+	if lengthTest != result {
+		t.Errorf("Result: %v; Expected: %v", result, lengthTest)
 	}
 }
