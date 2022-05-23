@@ -9,7 +9,6 @@ import (
 var ErrInvalidString = errors.New("invalid string")
 
 func Unpack(text string) (string, error) {
-
 	mas := []rune(text)
 	var textReturn string
 	var number int
