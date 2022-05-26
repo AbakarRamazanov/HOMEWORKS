@@ -2,10 +2,8 @@ package hw02unpackstring
 
 import (
 	"errors"
-	"testing"
-	"unicode/utf8"
-
 	"github.com/stretchr/testify/require"
+	"testing"
 )
 
 func TestUnpack(t *testing.T) {
@@ -46,9 +44,9 @@ func TestUnpackInvalidString(t *testing.T) {
 }
 
 func TestUnpack2(t *testing.T) {
-	const textTest, lengthTest = "3a4b6c", 6
-	result := utf8.RuneCountInString(textTest)
-	if lengthTest != result {
-		t.Errorf("Result: %v; Expected: %v", result, lengthTest)
+	const textTest, finallyTest = "a3b4c6", "aaabbbbcccccc"
+	result, _ := Unpack(textTest)
+	if finallyTest != result {
+		t.Errorf("Result: %v; Expected: %v", result, finallyTest)
 	}
 }
