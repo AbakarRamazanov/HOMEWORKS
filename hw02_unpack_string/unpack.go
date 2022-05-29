@@ -3,7 +3,7 @@ package hw02unpackstring
 import (
 	"errors"
 	"unicode"
-	"unicode/utf8"
+	utf8 "unicode/utf8"
 )
 
 var ErrInvalidString = errors.New("invalid string")
