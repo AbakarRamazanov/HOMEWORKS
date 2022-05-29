@@ -1,4 +1,4 @@
-module github.com/vaadimvoronkov/HOMEWORKS/tree/master/hw02_unpack_string
+module github.com/vaadimvoronkov/HOMEWORKS/hw02_unpack_string
 
 go 1.16
 
