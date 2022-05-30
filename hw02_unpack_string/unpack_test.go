@@ -3,7 +3,6 @@ package hw02unpackstring
 import (
 	"errors"
 	"testing"
-	"unicode/utf8"
 
 	"github.com/stretchr/testify/require"
 )
