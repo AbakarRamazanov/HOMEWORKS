@@ -44,11 +44,11 @@ func TestUnpackInvalidString(t *testing.T) {
 	}
 }
 
-func TestUnpack2(t *testing.T) {
-	const textTest, finallyTextLength = "a3b4c6", 13
-	result, _ := Unpack(textTest)
-	textLength := utf8.RuneCountInString(result)
-	if finallyTextLength != textLength {
-		t.Errorf("Result: %v; Expected: %v", result, textLength)
-	}
-}
+// func TestUnpack2(t *testing.T) {
+// 	const textTest, finallyTextLength = "a3b4c6", 13
+// 	result, _ := Unpack(textTest)
+// 	textLength := utf8.RuneCountInString(result)
+// 	if finallyTextLength != textLength {
+// 		t.Errorf("Result: %v; Expected: %v", result, textLength)
+// 	}
+// }
