@@ -3,7 +3,6 @@ package hw02unpackstring
 import (
 	"errors"
 	"unicode"
-	utf8 "unicode/utf8"
 )
 
 var ErrInvalidString = errors.New("invalid string")
@@ -23,7 +22,7 @@ func Unpack(text string) (string, error) {
 		if unicode.IsDigit(symbol) {
 			number = int(symbol - '0')
 			if number == 0 {
-				textReturn = textReturn[:utf8.RuneCountInString(textReturn)-1]
+				// textReturn = textReturn[:utf8.RuneCountInString(textReturn)-1]
 				continue
 			}
 			for j := 0; j < number-1; j++ {
